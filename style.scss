@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+$thumbHeight:          15px;
+
+$thumbWidth:           20px;
+
+$thumbBorder:          2px solid #ba0160;
+
+$thumbBackground:    #ba0160;
+
+$thumbBorderRadius:    10px;
+
+$thumbShadow:          none;
+
+$trackHeight:          20px;
+
+$trackWidth:           150px;
+
+$trackShadow:          none;
+
+$trackBackground:    #292828;
+
+$trackBorderRadius:    15px;
+
+$trackBorder:          2px solid #ba0160;
+
+$trackFocusBackground: none;
+
+html, body {
+  margin: 0;
+  color: #ba0160;
+  font-family: 'Anton', sans-serif;
+}
+#drum-machine {
+  width: 100vw;
+  height: 100vh;
+  background-color: #b8b4b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#drumpads {
+  // width: 300px;
+  // height: 100px;
+  padding: 10px;
+  background: #292828;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 80px);
+  grid-gap: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  cursor: pointer;
+  background-color:black;
+  user-select: none;
+}
+
+
+#display {
+  width: 210px;
+  height: 100%px;
+  background: #292828;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 0 5px 5px 0;
+}
+
+audio {
+  z-index: 2;
+}
+
+#displayButtons {
+  display: flex; 
+  flex-direction:column; 
+  align-items: center;
+  user-select: none;
+  #power {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 35px);
+    align-items: center;
+    justify-items: center;
+  }
+  #volume {
+    display: grid;
+    grid-template-columns: 20px 150px 20px;
+    grid-template-rows: repeat(2, 35px);
+    align-items: center;
+    justify-items: center;
+  }
+  #bank {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 35px);
+    align-items: center;
+    justify-items: center;
+  }
+  #info-monitor {
+    width: 80%;
+    height: 30px;
+    border: 2px solid #ba0160;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 15px;
+  background-color: #292828;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 2px solid #ba0160;
+  margin: 0px;
+  .checkbox {
+    
+    width: 40%;
+    height: 90%;
+    background-color:#ba0160;
+    transition: 1s;
+    border-radius: 15px;
+  }
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: $trackWidth;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+    &::-webkit-slider-runnable-track {
+      background: $trackFocusBackground;
+    }
+    &::-moz-range-track {
+      background: $trackFocusBackground;
+    }
+    
+    &::-ms-track {
+      background: $trackFocusBackground;
+    }
+  }
+
+  &::-ms-track {
+    width: $trackWidth;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: 0;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: -14px;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-ms-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: 0;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  
+  
+  &::-moz-range-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  &::-ms-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  // Special adjustment for IE
+  
+  &::-ms-fill-lower {
+    background: $trackBackground;
+    border: 1px solid #010101;
+    border-radius: $trackBorderRadius;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+
+  &::-ms-fill-upper {
+    background: $trackBackground;
+    border: 1px solid #010101;
+    border-radius: $trackBorderRadius;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  
+  &:focus::-ms-fill-lower {
+    background: $trackBackground;
+  }
+  &:focus::-ms-fill-upper {
+    background: $trackBackground;
+  }
+
+}
+
+@media (max-width: 375px) {
+  #drum-machine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #display {
+    border-radius: 0 0 5px 5px;
+  }
+  #drumpads {
+    border-radius: 5px;
+  }
+}

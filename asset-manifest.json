@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/fcc-drum-machine/static/js/main.4863c230.chunk.js",
+    "main.js.map": "/fcc-drum-machine/static/js/main.4863c230.chunk.js.map",
+    "runtime~main.js": "/fcc-drum-machine/static/js/runtime~main.b07d6816.js",
+    "runtime~main.js.map": "/fcc-drum-machine/static/js/runtime~main.b07d6816.js.map",
+    "static/js/2.d6a534e5.chunk.js": "/fcc-drum-machine/static/js/2.d6a534e5.chunk.js",
+    "static/js/2.d6a534e5.chunk.js.map": "/fcc-drum-machine/static/js/2.d6a534e5.chunk.js.map",
+    "index.html": "/fcc-drum-machine/index.html",
+    "precache-manifest.6e7241a75fcaf746544c25bd66f7ecf7.js": "/fcc-drum-machine/precache-manifest.6e7241a75fcaf746544c25bd66f7ecf7.js",
+    "service-worker.js": "/fcc-drum-machine/service-worker.js"
+  }
+}

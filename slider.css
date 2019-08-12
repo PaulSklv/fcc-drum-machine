@@ -1,0 +1,90 @@
+input[type=range] {
+  -webkit-appearance: none;
+  width: 150px;
+  background: transparent; }
+  input[type=range]:focus {
+    outline: none; }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: gray; }
+    input[type=range]:focus::-moz-range-track {
+      background: gray; }
+    input[type=range]:focus::-ms-track {
+      background: gray; }
+  input[type=range]::-ms-track {
+    width: 150px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent; }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid black;
+    height: 10px;
+    width: 20px;
+    border-radius: 5px;
+    background: black;
+    cursor: pointer;
+    margin-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid black;
+    height: 10px;
+    width: 20px;
+    border-radius: 5px;
+    background: black;
+    cursor: pointer;
+    margin-top: -14px;
+    box-shadow: none; }
+  input[type=range]::-ms-thumb {
+    appearance: none;
+    border: 2px solid black;
+    height: 10px;
+    width: 20px;
+    border-radius: 5px;
+    background: black;
+    cursor: pointer;
+    margin-top: 0;
+    box-shadow: none; }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 150px;
+    height: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 1px #0b7cd8;
+    box-shadow: 1px 1px 1px #0b7cd8;
+    background: #700000;
+    border-radius: 2px;
+    border: 0.1px solid black; }
+  input[type=range]::-moz-range-track {
+    width: 150px;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #0b7cd8;
+    background: #700000;
+    border-radius: 2px;
+    border: 0.1px solid black; }
+  input[type=range]::-ms-track {
+    width: 150px;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #0b7cd8;
+    background: #700000;
+    border-radius: 2px;
+    border: 0.1px solid black; }
+  input[type=range]::-ms-fill-lower {
+    background: #700000;
+    border: 1px solid #010101;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  input[type=range]::-ms-fill-upper {
+    background: #700000;
+    border: 1px solid #010101;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #700000; }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #700000; }

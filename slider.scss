@@ -1,0 +1,146 @@
+$thumbHeight:          10px;
+
+$thumbWidth:           20px;
+
+$thumbBorder:          2px solid black;
+
+$thumbBackground:    black;
+
+$thumbBorderRadius:    5px;
+
+$thumbShadow:          none;
+
+$trackHeight:          10px;
+
+$trackWidth:           150px;
+
+$trackShadow:          1px 1px 1px rgb(11, 124, 216);
+
+$trackBackground:    rgb(112, 0, 0);
+
+$trackBorderRadius:    2px;
+
+$trackBorder:          .1px solid black;
+
+$trackFocusBackground: gray;
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: $trackWidth;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+    &::-webkit-slider-runnable-track {
+      background: $trackFocusBackground;
+    }
+    &::-moz-range-track {
+      background: $trackFocusBackground;
+    }
+    
+    &::-ms-track {
+      background: $trackFocusBackground;
+    }
+  }
+
+  &::-ms-track {
+    width: $trackWidth;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: 0;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: -14px;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-ms-thumb {
+    appearance: none;
+    border: $thumbBorder;
+    height: $thumbHeight;
+    width: $thumbWidth;
+    border-radius: $thumbBorderRadius;
+    background: $thumbBackground;
+    cursor: pointer;
+    margin-top: 0;
+    box-shadow: $thumbShadow;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  
+  
+  &::-moz-range-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  &::-ms-track {
+    width: $trackWidth;
+    height: $trackHeight;
+    cursor: pointer;
+    box-shadow: $trackShadow;
+    background: $trackBackground;
+    border-radius: $trackBorderRadius;
+    border: $trackBorder;
+  }
+  
+  // Special adjustment for IE
+  
+  &::-ms-fill-lower {
+    background: $trackBackground;
+    border: 1px solid #010101;
+    border-radius: $trackBorderRadius;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+
+  &::-ms-fill-upper {
+    background: $trackBackground;
+    border: 1px solid #010101;
+    border-radius: $trackBorderRadius;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  
+  &:focus::-ms-fill-lower {
+    background: $trackBackground;
+  }
+  &:focus::-ms-fill-upper {
+    background: $trackBackground;
+  }
+
+}
